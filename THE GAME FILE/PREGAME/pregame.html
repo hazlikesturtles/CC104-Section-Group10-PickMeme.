@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pick Meme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pregame.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4"/>
+    <feDisplacementMap in="SourceGraphic" scale="3.5"/></filter>
+  </svg>
+    <main>
+    <!-- START: Pre-Game Screen -->
+    <section id="screen-start" class="screen">
+      <h1>Pick Meme</h1>
+      <p>Find every matching pair before time runs out.</p>
+      <div class="stack">
+        <button id="btn-play" class="btn primary">Play</button>
+        <button id="btn-exit" class="btn">Exit</button>
+      </div>
+    </section>
+
+    <!-- Difficulty Selection -->
+    <section id="screen-difficulty" class="screen" hidden>
+      <h1>Choose difficulty</h1>
+      <div class="stack">
+        <button class="btn diff" data-diff="easy">Easy <span>90 seconds</span></button>
+        <button class="btn diff" data-diff="normal">Normal <span>60 seconds</span></button>
+        <button class="btn diff" data-diff="hard">Hard <span>40 seconds</span></button>
+      </div>
+    </section>
+
+    <!-- END -->
+    <section id="screen-exit" class="screen" hidden>
+      <h1>Thanks for playing</h1>
+      <p>You can close this tab.</p>
+    </section>
+  </main>
+  <script src="pregame.js"></script>
+</body>
+</html>

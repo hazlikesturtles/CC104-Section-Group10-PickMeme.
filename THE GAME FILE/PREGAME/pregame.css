@@ -1,0 +1,46 @@
+:root {
+  --paper: #FBFCFD; --grid: #D9E4F0; --ink: #2B2B2E; --blue: #2F54EB;
+  --red: #E5484D; --green: #2DB67C; --hl: #FFE14D;
+  --wobble: 255px 18px 225px 18px / 18px 225px 18px 255px;
+  --head: "Permanent Marker", "Comic Sans MS", cursive;
+  --body: "Patrick Hand", "Comic Sans MS", cursive;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; color: var(--ink); font-family: var(--body); font-size: 1.2rem;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, var(--grid) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  display: grid; place-items: center; padding: 24px;
+}
+[hidden] { display: none !important; }
+.btn {
+  font: inherit; font-size: 1.3rem; color: var(--ink); background: #fff;
+  border: 3px solid var(--ink); border-radius: var(--wobble); padding: 12px 20px; cursor: pointer;
+  box-shadow: 4px 5px 0 var(--ink); filter: url(#rough);
+  transition: transform .12s, box-shadow .12s;
+}
+.btn:hover { transform: translate(-2px,-2px) rotate(-1deg); box-shadow: 6px 7px 0 var(--ink); }
+.btn:active { transform: translate(3px,3px); box-shadow: 1px 1px 0 var(--ink); }
+.btn:focus-visible { outline: 3px dashed var(--blue); outline-offset: 5px; }
+.btn.primary { background: var(--blue); color: #fff; }
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+main { width: min(420px, 100%); text-align: center; }
+h1 {
+  font-family: var(--head); font-weight: 400; font-size: clamp(2.6rem, 10vw, 4.2rem);
+  line-height: 1.05; margin: 0 0 12px; transform: rotate(-2.5deg);
+  display: inline-block; padding: 0 10px;
+  background: linear-gradient(176deg, transparent 52%, var(--hl) 52%, var(--hl) 88%, transparent 88%);
+  filter: url(#rough);
+}
+p { margin: 14px 0 30px; font-size: 1.3rem; }
+.stack { display: grid; gap: 16px; }
+.stack .btn:nth-child(odd) { transform: rotate(-1deg); }
+.stack .btn:nth-child(even) { transform: rotate(1.2deg); }
+.btn.diff { display: flex; justify-content: space-between; align-items: baseline; }
+.btn.diff span { font-size: 1rem; opacity: .7; }
+.btn[data-diff="easy"]   { background: #CFF3E2; }
+.btn[data-diff="normal"] { background: var(--hl); }
+.btn[data-diff="hard"]   { background: #FFD0D2; }

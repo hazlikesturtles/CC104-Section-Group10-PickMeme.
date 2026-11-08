@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pick Meme: Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ingame.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4"/>
+    <feDisplacementMap in="SourceGraphic" scale="3.5"/></filter>
+  </svg>
+    <main>
+    <header>
+      <span id="level">Normal</span>
+      <span id="pairs">0 / 8 pairs</span>
+      <span id="time">60s</span>
+    </header>
+    <div id="bar"><div id="bar-fill"></div></div>
+    <div id="board" aria-label="Memory cards"></div>
+  </main>
+  <script src="ingame.js"></script>
+</body>
+</html>

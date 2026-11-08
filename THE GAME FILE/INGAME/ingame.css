@@ -28,7 +28,7 @@ body {
 .btn.primary { background: var(--blue); color: #fff; }
 @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
 main { width: min(480px, 100%); }
-header { display: flex; justify-content: space-between; font-family: var(--head); font-size: 1.15rem; margin-bottom: 10px; }
+header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; font-family: var(--head); font-size: 1.15rem; margin-bottom: 10px; }
 #level { background: var(--hl); padding: 0 8px; transform: rotate(-2deg); }
 #time { font-variant-numeric: tabular-nums; }
 #bar { height: 14px; border: 3px solid var(--ink); border-radius: var(--wobble); background: #fff; overflow: hidden; margin-bottom: 20px; filter: url(#rough); }
@@ -59,3 +59,5 @@ header { display: flex; justify-content: space-between; font-family: var(--head)
 .card.matched .front { background: #CFF3E2; border-color: var(--green); box-shadow: 3px 4px 0 var(--green); }
 .card.matched { cursor: default; }
 @media (prefers-reduced-motion: reduce) { .inner, #bar-fill { transition: none; } }
+
+#restart { display: block; margin: 26px auto 0; font-size: 1.1rem; }

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pick Meme</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gochi+Hand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="pregame.css">
 </head>
 <body>
@@ -14,10 +14,11 @@
     <feDisplacementMap in="SourceGraphic" scale="3.5"/></filter>
   </svg>
     <main>
-    <!-- START: Pre-Game Screen -->
+    <!-- Pre-Game Screen -->
     <section id="screen-start" class="screen">
-      <h1>Pick Meme</h1>
+      <h1 aria-label="Pick Meme"><span>P</span><span>i</span><span>c</span><span>k</span><span class="sp"> </span><span>M</span><span>e</span><span>m</span><span>e</span></h1>
       <p>Find every matching pair before time runs out.</p>
+      <div class="hint">start here!<i></i></div>
       <div class="stack">
         <button id="btn-play" class="btn primary">Play</button>
         <button id="btn-exit" class="btn">Exit</button>
@@ -34,7 +35,7 @@
       </div>
     </section>
 
-    <!-- END -->
+    <!-- end screen -->
     <section id="screen-exit" class="screen" hidden>
       <h1>Thanks for playing</h1>
       <p>You can close this tab.</p>

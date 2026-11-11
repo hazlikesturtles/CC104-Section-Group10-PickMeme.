@@ -10,12 +10,12 @@ $("detail").textContent = won
   ? `You found every pair in ${tries} attempts with ${left}s to spare.`
   : `Time ran out after ${tries} attempts.`;
 
-//  back to Difficulty Selection
+// back to Difficulty Selection if yes
 $("btn-yes").addEventListener("click", () => {
   location.href = "../pregame/pregame.html?step=difficulty";
 });
 
-// Exit 
+// Exit if no
 $("btn-no").addEventListener("click", () => {
   $("screen-result").hidden = true;
   $("screen-exit").hidden = false;

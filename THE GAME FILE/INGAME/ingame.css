@@ -1,63 +1,64 @@
 :root {
-  --paper: #FDFDFB; --dots: #C5CEDD; --ink: #26262B;
-  --yellow: #FFE066; --pink: #FF9EC0; --mint: #8FE3C0; --sky: #8CCBFF; --peach: #FFB88A; --red: #FF5A5F;
+  --card-back: url("cardback.svg");
+  --paper: #F4F5F7; --grid: #D8DCE4; --ink: #111111; --blue: #1F4FFF; --orange: #FF7A1A; --red: #E5484D;
   --wobble: 255px 18px 225px 18px / 18px 225px 18px 255px;
-  --head: "Gochi Hand", "Comic Sans MS", cursive;
+  --head: "Permanent Marker", "Impact", cursive;
   --body: "Gaegu", "Comic Sans MS", cursive;
-  --d-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 5 L39 25 L60 26 L43 39 L49 59 L32 47 L15 59 L21 39 L4 26 L25 25 Z' fill='%23FFE066'/%3E%3C/svg%3E");
-  --d-heart: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 57 C8 40 5 22 17 15 C25 11 31 17 32 22 C34 16 41 11 48 15 C59 22 56 40 32 57 Z' fill='%23FF9EC0'/%3E%3C/svg%3E");
-  --d-spiral: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 32 C35 30 37 33 35 36 C32 40 26 37 26 31 C26 24 35 21 40 26 C46 32 42 43 33 46 C22 49 13 40 15 29 C17 18 30 11 41 14'/%3E%3C/svg%3E");
-  --d-smile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='32' r='24' fill='%23FFE066'/%3E%3Ccircle cx='24' cy='26' r='2.5' fill='%2326262B'/%3E%3Ccircle cx='40' cy='26' r='2.5' fill='%2326262B'/%3E%3Cpath d='M20 37 Q32 51 44 37'/%3E%3C/svg%3E");
-  --d-sad: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='32' r='24' fill='%23CDE9FF'/%3E%3Ccircle cx='24' cy='26' r='2.5' fill='%2326262B'/%3E%3Ccircle cx='40' cy='26' r='2.5' fill='%2326262B'/%3E%3Cpath d='M21 46 Q32 34 43 46'/%3E%3Cpath d='M22 33 Q20 38 22 41' stroke='%232F8CFF'/%3E%3C/svg%3E");
-  --d-flower: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg fill='%23FF9EC0'%3E%3Ccircle cx='32' cy='15' r='10'/%3E%3Ccircle cx='49' cy='28' r='10'/%3E%3Ccircle cx='43' cy='48' r='10'/%3E%3Ccircle cx='21' cy='48' r='10'/%3E%3Ccircle cx='15' cy='28' r='10'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='8' fill='%23FFE066'/%3E%3C/svg%3E");
-  --d-sun: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='32' r='12' fill='%23FFE066'/%3E%3Cpath d='M32 4 V14 M32 50 V60 M4 32 H14 M50 32 H60 M12 12 L19 19 M45 45 L52 52 M52 12 L45 19 M19 45 L12 52'/%3E%3C/svg%3E");
-  --d-bolt: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M37 4 L16 36 H30 L26 60 L49 26 H34 Z' fill='%23FFE066'/%3E%3C/svg%3E");
-  --d-cloud: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 42 C7 42 6 29 16 27 C16 14 35 10 39 23 C51 19 59 34 49 42 Z' fill='%23CDE9FF'/%3E%3Cpath d='M20 49 L17 58 M32 49 L29 58 M44 49 L41 58' stroke='%232F8CFF'/%3E%3C/svg%3E");
-  --d-squig: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 40 C12 18 20 18 24 36 C28 54 36 54 40 32 C44 12 52 12 60 28'/%3E%3C/svg%3E");
-  --d-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 34 L26 50 L54 12' stroke='%232DB67C' stroke-width='7'/%3E%3C/svg%3E");
-  --d-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 8 C34 2 56 22 44 46 M34 40 L44 50 L52 38'/%3E%3C/svg%3E");
-  --d-confetti: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2326262B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 12 L16 22 M50 8 L56 18 M8 50 Q14 42 20 50 T32 50 M44 48 L54 56 M44 56 L54 48' stroke='%23FF9EC0'/%3E%3Ccircle cx='34' cy='14' r='4' fill='%238CCBFF'/%3E%3Ccircle cx='56' cy='36' r='4' fill='%23FFE066'/%3E%3Ccircle cx='12' cy='32' r='4' fill='%238FE3C0'/%3E%3C/svg%3E");
+  --d-skull: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23111111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 30 C14 14 50 14 50 30 C50 38 46 40 44 42 V50 H20 V42 C18 40 14 38 14 30 Z' fill='%23FFFFFF'/%3E%3Ccircle cx='24' cy='31' r='5' fill='%23111111'/%3E%3Ccircle cx='40' cy='31' r='5' fill='%23111111'/%3E%3Cpath d='M32 38 L29 44 H35 Z' fill='%23111111'/%3E%3Cpath d='M26 50 V45 M32 50 V46 M38 50 V45'/%3E%3C/svg%3E");
+  --d-bolt: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23111111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M37 4 L16 36 H30 L26 60 L49 26 H34 Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+  --d-pad: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23111111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 20 H52 C58 20 62 34 58 46 C56 52 48 52 44 44 H20 C16 52 8 52 6 46 C2 34 6 20 12 20 Z' fill='%23FFFFFF'/%3E%3Cpath d='M20 26 V38 M14 32 H26'/%3E%3Ccircle cx='43' cy='29' r='2.5' fill='%23111111'/%3E%3Ccircle cx='50' cy='35' r='2.5' fill='%23111111'/%3E%3C/svg%3E");
+  --d-rocket: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23111111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 4 C44 14 46 30 42 44 H22 C18 30 20 14 32 4 Z' fill='%23FFFFFF'/%3E%3Ccircle cx='32' cy='26' r='5'/%3E%3Cpath d='M22 36 L12 48 L22 46 M42 36 L52 48 L42 46 M28 49 L32 60 L36 49'/%3E%3C/svg%3E");
+  --d-burst: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23111111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 4 L38 26 L60 32 L38 38 L32 60 L26 38 L4 32 L26 26 Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+  --d-trophy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23111111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 8 H44 V24 C44 34 38 40 32 40 C26 40 20 34 20 24 Z' fill='%23FFFFFF'/%3E%3Cpath d='M20 12 H10 C10 24 14 28 22 28 M44 12 H54 C54 24 50 28 42 28 M32 40 V50 M24 50 H40 V57 H24 Z'/%3E%3C/svg%3E");
+  --d-cloud: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23111111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 42 C7 42 6 29 16 27 C16 14 35 10 39 23 C51 19 59 34 49 42 Z' fill='%23FFFFFF'/%3E%3Cpath d='M20 49 L17 58 M32 49 L29 58 M44 49 L41 58'/%3E%3C/svg%3E");
+  --d-spiral: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23111111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 32 C35 30 37 33 35 36 C32 40 26 37 26 31 C26 24 35 21 40 26 C46 32 42 43 33 46 C22 49 13 40 15 29 C17 18 30 11 41 14'/%3E%3C/svg%3E");
+  --d-squig: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23111111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 40 C12 18 20 18 24 36 C28 54 36 54 40 32 C44 12 52 12 60 28'/%3E%3C/svg%3E");
+  --d-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23111111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 34 L26 50 L54 12' stroke-width='7'/%3E%3C/svg%3E");
+  --d-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23111111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 8 C34 2 56 22 44 46 M34 40 L44 50 L52 38'/%3E%3C/svg%3E");
+  --d-confetti: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23111111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 12 L16 22 M50 8 L56 18 M8 50 Q14 42 20 50 T32 50 M44 48 L54 56 M44 56 L54 48'/%3E%3Ccircle cx='34' cy='14' r='4' fill='%23FFFFFF'/%3E%3Ccircle cx='56' cy='36' r='4' fill='%23FFFFFF'/%3E%3Ccircle cx='12' cy='32' r='4' fill='%23FFFFFF'/%3E%3C/svg%3E");
 }
 * { box-sizing: border-box; }
 body {
   margin: 0; min-height: 100vh; color: var(--ink); font-family: var(--body); font-weight: 700; font-size: 1.3rem;
-  background: radial-gradient(circle, var(--dots) 1.6px, transparent 1.9px) 0 0 / 26px 26px, var(--paper);
+  background-color: var(--paper);
+  background-image: linear-gradient(var(--grid) 1.5px, transparent 1.5px), linear-gradient(90deg, var(--grid) 1.5px, transparent 1.5px);
+  background-size: 30px 30px;
   display: grid; place-items: center; padding: 24px;
 }
 main { position: relative; z-index: 1; }
 [hidden] { display: none !important; }
 
-/* doodles drawn in the margins */
+/* black & white doodles in the margins */
 html::before, body::before, body::after {
   content: ""; position: fixed; pointer-events: none; z-index: 0;
   background: center / contain no-repeat; filter: url(#rough);
 }
 
 .btn {
-  font: inherit; font-family: var(--head); font-weight: 400; font-size: 1.5rem; color: var(--ink);
+  font: inherit; font-family: var(--head); font-weight: 400; font-size: 1.4rem; color: var(--ink);
   background: #fff; border: 3px solid var(--ink); border-radius: var(--wobble); padding: 10px 20px; cursor: pointer;
   box-shadow: 4px 5px 0 var(--ink); filter: url(#rough); transition: transform .12s, box-shadow .12s;
 }
 .btn:hover { transform: translate(-2px,-2px) rotate(-1.5deg); box-shadow: 6px 7px 0 var(--ink); }
 .btn:active { transform: translate(3px,3px); box-shadow: 1px 1px 0 var(--ink); }
 .btn:focus-visible { outline: 3px dashed var(--ink); outline-offset: 5px; }
-.btn.primary { background: var(--pink); }
+.btn.primary { background: var(--blue); color: #fff; }
 @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
 @media (max-width: 600px) { html::before, body::before, body::after { display: none; } }
 
 main { width: min(480px, 100%); }
-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-family: var(--head); font-weight: 400; font-size: 1.25rem; }
-header span { border: 2.5px solid var(--ink); border-radius: var(--wobble); padding: 0 12px; box-shadow: 2px 3px 0 var(--ink); filter: url(#rough); }
-#level { background: var(--yellow); transform: rotate(-2deg); }
-#pairs { background: var(--mint);   transform: rotate(1.5deg); }
-#tries { background: var(--sky);    transform: rotate(-1deg); }
-#time  { background: var(--pink);   transform: rotate(2deg); font-variant-numeric: tabular-nums; }
+header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-family: var(--head); font-weight: 400; font-size: 1.15rem; }
+header span { background: #fff; border: 2.5px solid var(--ink); border-radius: var(--wobble); padding: 0 12px; box-shadow: 2px 3px 0 var(--ink); filter: url(#rough); }
+#level { background: var(--orange); transform: rotate(-2deg); }
+#pairs { transform: rotate(1.5deg); }
+#tries { transform: rotate(-1deg); }
+#time  { background: var(--blue); color: #fff; transform: rotate(2deg); font-variant-numeric: tabular-nums; }
 #bar { height: 16px; border: 3px solid var(--ink); border-radius: var(--wobble); background: #fff; overflow: hidden; margin-bottom: 18px; filter: url(#rough); }
-#bar-fill { height: 100%; width: 100%; background: var(--sky); transition: width 1s linear; }
+#bar-fill { height: 100%; width: 100%; background: var(--blue); transition: width 1s linear; }
 #bar-fill.low { background: var(--red); }
 
 #board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 14px; border: 3px dashed var(--ink); border-radius: var(--wobble); }
-.card { aspect-ratio: 1; perspective: 600px; border: 0; background: none; padding: 0; cursor: pointer; }
+.card { aspect-ratio: 5 / 7; perspective: 600px; border: 0; background: none; padding: 0; cursor: pointer; }
 .card:nth-child(4n+1) { rotate: -2.5deg; }
 .card:nth-child(4n+2) { rotate: 1.5deg; }
 .card:nth-child(4n+3) { rotate: -1deg; }
@@ -67,22 +68,17 @@ header span { border: 2.5px solid var(--ink); border-radius: var(--wobble); padd
 .card.flipped .inner, .card.matched .inner { transform: rotateY(180deg); }
 .face {
   position: absolute; inset: 0; backface-visibility: hidden; border: 3px solid var(--ink);
-  border-radius: var(--wobble); display: grid; place-items: center;
+  border-radius: 14px 12px 15px 11px / 12px 15px 11px 14px; display: grid; place-items: center;
   font-size: clamp(1.8rem, 9vw, 2.8rem); box-shadow: 3px 4px 0 var(--ink); filter: url(#rough);
 }
-.back { background-repeat: no-repeat; background-position: center; background-size: 62%; }
-.card:nth-child(5n+1) .back { background-color: #FFF1A8; background-image: var(--d-star); }
-.card:nth-child(5n+2) .back { background-color: #FFD3E2; background-image: var(--d-heart); }
-.card:nth-child(5n+3) .back { background-color: #CDE9FF; background-image: var(--d-spiral); }
-.card:nth-child(5n+4) .back { background-color: #CFF3E2; background-image: var(--d-smile); }
-.card:nth-child(5n)   .back { background-color: #FFD9C0; background-image: var(--d-flower); }
+.back { background: #fff var(--card-back) center / 100% 100% no-repeat; filter: none; }
 .front { background: #fff; transform: rotateY(180deg); }
-.card.flipped .front { background: #FFF6C2; }
-.card.matched .front { background: #CFF3E2; }
+.card.flipped .front { background: #FFE3C7; }
+.card.matched .front { background: #D6E2FF; box-shadow: 3px 4px 0 var(--blue); }
 .card.matched .front::after { content: ""; position: absolute; top: -8px; right: -6px; width: 30px; height: 30px; background: var(--d-check) center / contain no-repeat; }
 .card.matched { cursor: default; }
-#restart { display: block; margin: 26px auto 0; font-size: 1.3rem; background: var(--peach); }
-body::before { top: 14px; left: 14px; width: 80px; height: 80px; background-image: var(--d-star); transform: rotate(-12deg); }
+#restart { display: block; margin: 26px auto 0; font-size: 1.2rem; }
+body::before { top: 14px; left: 14px; width: 80px; height: 80px; background-image: var(--d-burst); transform: rotate(-12deg); }
 body::after  { right: 16px; bottom: 20px; width: 90px; height: 90px; background-image: var(--d-spiral); }
 html::before { right: 20px; top: 20px; width: 70px; height: 70px; background-image: var(--d-bolt); transform: rotate(12deg); }
 @media (prefers-reduced-motion: reduce) { .inner, #bar-fill { transition: none; } }

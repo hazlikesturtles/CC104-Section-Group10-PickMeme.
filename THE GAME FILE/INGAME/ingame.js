@@ -1,4 +1,4 @@
-// 6 values x 2 = 12 cards (4 x 3 grid). Replace emojis with your meme images,
+// 6 values x 2 = 12 cards (4 x 3 grid). dito niyo i rereplace yung mga emojis into memes
 // e.g. '<img src="memes/doge.png" alt="Doge">'
 const MEMES = ["🐸", "🐶", "😹", "🗿", "💀", "🔥"];
 const TIMERS = { easy: 90, normal: 60, hard: 40 }; // seconds

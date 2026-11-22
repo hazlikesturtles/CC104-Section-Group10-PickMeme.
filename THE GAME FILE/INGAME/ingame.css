@@ -58,6 +58,20 @@ header span { background: #fff; border: 2.5px solid var(--ink); border-radius: v
 #bar-fill.low { background: var(--red); }
 
 #board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 14px; border: 3px dashed var(--ink); border-radius: var(--wobble); }
+/* Easy: 3 columns */
+#board.easy {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Normal: 4 columns */
+#board.normal {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Hard: 5 columns */
+#board.hard {
+    grid-template-columns: repeat(5, 1fr);
+}
 .card { aspect-ratio: 5 / 7; perspective: 600px; border: 0; background: none; padding: 0; cursor: pointer; }
 .card:nth-child(4n+1) { rotate: -2.5deg; }
 .card:nth-child(4n+2) { rotate: 1.5deg; }

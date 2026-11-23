@@ -1,5 +1,5 @@
 :root {
-  --card-back: url("../../cardback.png");
+  --card-back: url("../../cardback-white.png");
   --paper: #F4F5F7; --grid: #D8DCE4; --ink: #111111; --blue: #1F4FFF; --orange: #FF7A1A; --red: #E5484D;
   --wobble: 255px 18px 225px 18px / 18px 225px 18px 255px;
   --head: "Permanent Marker", "Impact", cursive;
@@ -85,7 +85,7 @@ header span { background: #fff; border: 2.5px solid var(--ink); border-radius: v
   border-radius: 14px 12px 15px 11px / 12px 15px 11px 14px; display: grid; place-items: center;
   font-size: clamp(1.8rem, 9vw, 2.8rem); box-shadow: 3px 4px 0 var(--ink); filter: url(#rough);
 }
-.back { background: #111 var(--card-back) center / cover no-repeat; filter: none; overflow: hidden; }
+.back { background: #fff var(--card-back) center / cover no-repeat; filter: none; overflow: hidden; }
 .front { background: #fff; transform: rotateY(180deg); }
 .card.flipped .front { background: #FFE3C7; }
 .card.matched .front { background: #D6E2FF; box-shadow: 3px 4px 0 var(--blue); }

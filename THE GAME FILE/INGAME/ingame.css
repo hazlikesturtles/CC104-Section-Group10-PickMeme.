@@ -1,5 +1,5 @@
 :root {
-  --card-back: url("cardback.png");
+  --card-back: url("../../cardback.png");
   --paper: #F4F5F7; --grid: #D8DCE4; --ink: #111111; --blue: #1F4FFF; --orange: #FF7A1A; --red: #E5484D;
   --wobble: 255px 18px 225px 18px / 18px 225px 18px 255px;
   --head: "Permanent Marker", "Impact", cursive;

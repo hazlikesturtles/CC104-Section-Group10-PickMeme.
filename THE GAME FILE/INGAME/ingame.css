@@ -1,5 +1,5 @@
 :root {
-  --card-back: url("cardback.svg");
+  --card-back: url("cardback.png");
   --paper: #F4F5F7; --grid: #D8DCE4; --ink: #111111; --blue: #1F4FFF; --orange: #FF7A1A; --red: #E5484D;
   --wobble: 255px 18px 225px 18px / 18px 225px 18px 255px;
   --head: "Permanent Marker", "Impact", cursive;
@@ -72,7 +72,7 @@ header span { background: #fff; border: 2.5px solid var(--ink); border-radius: v
 #board.hard {
     grid-template-columns: repeat(5, 1fr);
 }
-.card { aspect-ratio: 5 / 7; perspective: 600px; border: 0; background: none; padding: 0; cursor: pointer; }
+.card { aspect-ratio: 374 / 550; perspective: 600px; border: 0; background: none; padding: 0; cursor: pointer; }
 .card:nth-child(4n+1) { rotate: -2.5deg; }
 .card:nth-child(4n+2) { rotate: 1.5deg; }
 .card:nth-child(4n+3) { rotate: -1deg; }
@@ -85,7 +85,7 @@ header span { background: #fff; border: 2.5px solid var(--ink); border-radius: v
   border-radius: 14px 12px 15px 11px / 12px 15px 11px 14px; display: grid; place-items: center;
   font-size: clamp(1.8rem, 9vw, 2.8rem); box-shadow: 3px 4px 0 var(--ink); filter: url(#rough);
 }
-.back { background: #fff var(--card-back) center / 100% 100% no-repeat; filter: none; }
+.back { background: #111 var(--card-back) center / cover no-repeat; filter: none; overflow: hidden; }
 .front { background: #fff; transform: rotateY(180deg); }
 .card.flipped .front { background: #FFE3C7; }
 .card.matched .front { background: #D6E2FF; box-shadow: 3px 4px 0 var(--blue); }

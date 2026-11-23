@@ -1,11 +1,26 @@
 // 6 values x 2 = 12 cards (4 x 3 grid). dito niyo i rereplace yung mga emojis into memes
 // e.g. '<img src="memes/doge.png" alt="Doge">'
-const MEMES = ["🐸", "🐶", "😹", "🗿", "💀", "🔥"];
-const TIMERS = { easy: 90, normal: 60, hard: 40 }; // seconds
+const MEMES = [
+    "🐸", "🐶", "😹", "🗿", "💀",
+    "🔥", "🐱", "🐼", "🦊", "🐵",
+    "🐰", "🐻", "🐨", "🦁", "🐯"
+];
+
+// CHANGED: Added the number of pairs per difficulty
+const DIFFICULTIES = {
+    easy: { pairs: 9, time: 90 },
+    normal: { pairs: 12, time: 60 },
+    hard: { pairs: 15, time: 40 }
+};
 
 const params = new URLSearchParams(location.search);
-const diff = TIMERS[params.get("d")] ? params.get("d") : "normal";
-const total = TIMERS[diff];
+const diff = DIFFICULTIES[params.get("d")] ? params.get("d") : "normal";
+
+// NEW: Get selected difficulty settings
+const settings = DIFFICULTIES[diff];
+const gameMemes = MEMES.slice(0, settings.pairs);
+
+const total = settings.time;
 
 const board = document.getElementById("board");
 const timeEl = document.getElementById("time");
@@ -38,7 +53,11 @@ function startGame() {
   first = null; locked = false; found = 0; attempts = 0; remaining = total; ended = false;
   board.innerHTML = "";
 
-  const deck = shuffle([...MEMES, ...MEMES]);
+  // CHANGED: Generate cards based on selected difficulty
+const deck = shuffle([...gameMemes, ...gameMemes]);
+
+// NEW: Set the correct board layout
+board.className = diff;
   deck.forEach((meme) => {
     const card = document.createElement("button");
     card.className = "card";
@@ -76,7 +95,8 @@ function pick(card) {
     found++;
     first = null; locked = false;
     updateHud();
-    if (found === MEMES.length) finish("win");
+   // CHANGED: Check pairs based on selected difficulty
+if (found === gameMemes.length) finish("win");
   } else {
     // No match: hide both after a short delay
     updateHud();
@@ -90,7 +110,8 @@ function pick(card) {
 
 function updateHud() {
   timeEl.textContent = remaining + "s";
-  pairsEl.textContent = `${found} / ${MEMES.length} pairs`;
+  // CHANGED: Display the correct number of matching pairs
+pairsEl.textContent = `${found} / ${gameMemes.length} pairs`;
   triesEl.textContent = `${attempts} tries`;
   fill.style.width = (remaining / total) * 100 + "%";
   fill.classList.toggle("low", remaining <= 10);

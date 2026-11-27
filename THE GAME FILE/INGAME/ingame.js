@@ -75,7 +75,7 @@ board.className = diff;
     card.className = "card";
     card.dataset.meme = meme;
     card.setAttribute("aria-label", "Hidden card");
-    card.innerHTML = <div class="inner"><div class="face back"></div><div class="face front">${meme}</div></div>;
+    card.innerHTML = `<div class="inner"><div class="face back"></div><div class="face front">${meme}</div></div>`;
     card.addEventListener("click", () => pick(card));
     board.appendChild(card);
   });
@@ -123,8 +123,8 @@ if (found === gameMemes.length) finish("win");
 function updateHud() {
   timeEl.textContent = remaining + "s";
   // CHANGED: Display the correct number of matching pairs
-pairsEl.textContent = ${found} / ${gameMemes.length} pairs;
-  triesEl.textContent = ${attempts} tries;
+pairsEl.textContent = `${found} / ${gameMemes.length} pairs`;
+  triesEl.textContent = `${attempts} tries`;
   fill.style.width = (remaining / total) * 100 + "%";
   fill.classList.toggle("low", remaining <= 10);
 }
@@ -134,7 +134,7 @@ function finish(result) {
   ended = true;
   clearInterval(tick);
   setTimeout(() => {
-    location.href = ../postgame/postgame.html?result=${result}&d=${diff}&left=${Math.max(remaining, 0)}&tries=${attempts};
+    location.href = `../postgame/postgame.html?result=${result}&d=${diff}&left=${Math.max(remaining, 0)}&tries=${attempts}`;
   }, 700);
 }
 

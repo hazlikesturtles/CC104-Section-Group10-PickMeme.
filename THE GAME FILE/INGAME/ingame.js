@@ -1,21 +1,21 @@
 // 6 values x 2 = 12 cards (4 x 3 grid). dito niyo i rereplace yung mga emojis into memes
 // e.g. '<img src="memes/doge.png" alt="Doge">'
 const MEMES = [
-    '<img src="../Assets/67.jpg" alt="67">',
-    '<img src="../Assets/Alamano.png" alt="Alamano">',
-    '<img src="../Assets/Andito%20na%20si%20bong%20revilia.jpg" alt="Andito na si bong revilia">',
-    '<img src="../Assets/Anlala.jpg" alt="Anlala">',
-    '<img src="../Assets/Aray%20ko.jpg" alt="Aray ko">',
-    '<img src="../Assets/Baka%20renejay%20to.png" alt="Baka renejay to">',
-    '<img src="../Assets/Batang%20pasawayyyy.jpg" alt="Batang pasawayyyy">',
-    '<img src="../Assets/Bigyan%20ng%20jacket%20yan.jpg" alt="Bigyan ng jacket yan">',
-    '<img src="../Assets/Bulalord.png" alt="Bulalord">',
-    '<img src="../Assets/Burst%20fade%20parin%20to%20ya.png" alt="Burst fade parin to ya">',
-    '<img src="../Assets/Caloocan%20boy.jpg" alt="Caloocan boy">',
-    '<img src="../Assets/Coke%20tota%20tola.png" alt="Coke tota tola">',
-    '<img src="../Assets/Depende%20kung%203%20yan.jpg" alt="Depende kung 3 yan">',
-    '<img src="../Assets/HOY!%20Walang%20kaninboseng.png" alt="HOY! Walang kaninboseng">',
-    '<img src="../Assets/Happy%20New%20year%20Ibriwan.jpg" alt="Happy New year Ibriwan">'
+    '<img src="../../Assets/67.jpg" alt="67">',
+    '<img src="../../Assets/Alamano.png" alt="Alamano">',
+    '<img src="../../Assets/Andito%20na%20si%20bong%20revilia.jpg" alt="Andito na si bong revilia">',
+    '<img src="../../Assets/Anlala.jpg" alt="Anlala">',
+    '<img src="../../Assets/Aray%20ko.jpg" alt="Aray ko">',
+    '<img src="../../Assets/Baka%20renejay%20to.png" alt="Baka renejay to">',
+    '<img src="../../Assets/Batang%20pasawayyyy.jpg" alt="Batang pasawayyyy">',
+    '<img src="../../Assets/Bigyan%20ng%20jacket%20yan.jpg" alt="Bigyan ng jacket yan">',
+    '<img src="../../Assets/Bulalord.png" alt="Bulalord">',
+    '<img src="../../Assets/Burst%20fade%20parin%20to%20ya.png" alt="Burst fade parin to ya">',
+    '<img src="../../Assets/Caloocan%20boy.jpg" alt="Caloocan boy">',
+    '<img src="../../Assets/Coke%20tota%20tola.png" alt="Coke tota tola">',
+    '<img src="../../Assets/Depende%20kung%203%20yan.jpg" alt="Depende kung 3 yan">',
+    '<img src="../../Assets/HOY!%20Walang%20kaninboseng.png" alt="HOY! Walang kaninboseng">',
+    '<img src="../../Assets/Happy%20New%20year%20Ibriwan.jpg" alt="Happy New year Ibriwan">'
 ];
 
 // CHANGED: Added the number of pairs per difficulty
@@ -75,7 +75,7 @@ board.className = diff;
     card.className = "card";
     card.dataset.meme = meme;
     card.setAttribute("aria-label", "Hidden card");
-    card.innerHTML = `<div class="inner"><div class="face back"></div><div class="face front">${meme}</div></div>`;
+    card.innerHTML = <div class="inner"><div class="face back"></div><div class="face front">${meme}</div></div>;
     card.addEventListener("click", () => pick(card));
     board.appendChild(card);
   });
@@ -123,8 +123,8 @@ if (found === gameMemes.length) finish("win");
 function updateHud() {
   timeEl.textContent = remaining + "s";
   // CHANGED: Display the correct number of matching pairs
-pairsEl.textContent = `${found} / ${gameMemes.length} pairs`;
-  triesEl.textContent = `${attempts} tries`;
+pairsEl.textContent = ${found} / ${gameMemes.length} pairs;
+  triesEl.textContent = ${attempts} tries;
   fill.style.width = (remaining / total) * 100 + "%";
   fill.classList.toggle("low", remaining <= 10);
 }
@@ -134,7 +134,7 @@ function finish(result) {
   ended = true;
   clearInterval(tick);
   setTimeout(() => {
-    location.href = `../postgame/postgame.html?result=${result}&d=${diff}&left=${Math.max(remaining, 0)}&tries=${attempts}`;
+    location.href = ../postgame/postgame.html?result=${result}&d=${diff}&left=${Math.max(remaining, 0)}&tries=${attempts};
   }, 700);
 }
 

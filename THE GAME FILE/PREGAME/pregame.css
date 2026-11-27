@@ -25,8 +25,8 @@
 body {
   margin: 0; min-height: 100vh; color: var(--ink); font-family: var(--body); font-weight: 700; font-size: 1.3rem;
   background-color: var(--paper);
-  background-image: linear-gradient(var(--grid) 1.5px, transparent 1.5px), linear-gradient(90deg, var(--grid) 1.5px, transparent 1.5px);
-  background-size: 30px 30px;
+  background-image: url("../../Assets/gamebackground.jpg");
+  background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;
   display: grid; place-items: center; padding: 24px;
 }
 main { position: relative; z-index: 1; }
